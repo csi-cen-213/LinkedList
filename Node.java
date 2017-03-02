@@ -14,11 +14,25 @@ public class Node{
     this.next = null;
   }
   
-/*
+  // Getter/Setter Methods
   
-  + getData(): int
-+ setData(int) : void
-+ getNext() : Node
-+ setNext(Node) : void
+  public int getData() {
+    return this.data;
+  }
+  
+  public void setData(int data) {
+    this.data = data;
+  }
+  
+  public Node getNext() {
+    return this.next;
+  }
+  
+  public void setNext(Node next) {
+    this.next = next;
+  }
+  
+  
+/*
 + print() : void */
 }

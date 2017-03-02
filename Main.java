@@ -12,5 +12,12 @@ public class Main{
     
     SinglyLinkedList ll = new SinglyLinkedList();
     System.out.println(ll);
+    System.out.println(ll.getHead());
+    System.out.println(ll.getSize());
+    ll.setHead(new Node(2));
+    System.out.println(ll.getHead());
+    ll.getHead().print();
+    System.out.println(ll.getSize());
+    
   }
 }

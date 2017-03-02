@@ -32,6 +32,12 @@ public class Node{
     this.next = next;
   }
   
+  // Methods
+  
+  /* Prints data in node */
+  public void print() {
+    System.out.print(this.data + " ");
+  }
   
 /*
 + print() : void */

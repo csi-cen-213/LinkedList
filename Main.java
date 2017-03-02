@@ -7,5 +7,7 @@ public class Main{
     Node myOtherNode = new Node(5);
     System.out.println(myOtherNode.getData());
     System.out.println(myOtherNode.getNext());
+    // test print
+    myOtherNode.print();
   }
 }

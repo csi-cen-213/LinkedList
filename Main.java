@@ -21,10 +21,18 @@ public class Main{
     ll.print();*/
     
     // test isEmpty works
-    ll.print();
+    /*ll.print();
     ll.setHead(new Node(5));
-    ll.print();
+    ll.print();*/
     
+    // test adding to font of list
+    ll.add(0,1);
+    ll.add(0,2);
+    ll.add(0,3);
+    ll.add(0,4);
+    ll.add(0,5);
+    ll.print();
+    System.out.println("size: " + ll.getSize());
     
   }
 }

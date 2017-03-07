@@ -23,7 +23,6 @@ public class SinglyLinkedList{
   
   /* Traverses & prints list */
   public void print() {
-    // TEST: works with more than one item
     if (this.isEmpty()) {
       System.out.println("List is empty.");
     }
@@ -41,8 +40,26 @@ public class SinglyLinkedList{
     return this.head==null;
   }
   
+  public void add(int index, int data) {
+    // simple version: assume index is 0
+    // write pseudocode to add data to
+    // the front of the list
+    //BUG: doesn't update size properly
+    Node newNode = new Node(data);
+    if (this.isEmpty()) {
+      this.head = newNode;
+    }
+    else {
+      newNode.setNext(head);
+      this.head = newNode;
+    }
 /*
-+ isEmpty():Boolean
+
+head = new
+*/
+  }
+  
+/*
 + add(int, int) : void
 + find(int): Node
 + add(int, Node) : void

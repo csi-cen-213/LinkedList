@@ -20,10 +20,31 @@ public class SinglyLinkedList{
   public int getSize() {
     return this.size;
   }
+  
+  /* Traverses & prints list */
+  public void print() {
+    // TEST: works with more than one item
+    if (this.isEmpty()) {
+      System.out.println("List is empty.");
+    }
+    else {
+      Node tmp = this.head;
+      while (tmp != null) {
+        tmp.print();
+        tmp = tmp.getNext();
+      }
+      System.out.println("");
+    }
+  }
+  
+  public boolean isEmpty() {
+    return this.head==null;
+  }
+  
 /*
 + isEmpty():Boolean
++ add(int, int) : void
 + find(int): Node
 + add(int, Node) : void
-+ add(int, int) : void
-+ print() : void*/
+*/
 }

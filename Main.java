@@ -11,13 +11,20 @@ public class Main{
     myOtherNode.print();*/
     
     SinglyLinkedList ll = new SinglyLinkedList();
-    System.out.println(ll);
+    /*System.out.println(ll);
     System.out.println(ll.getHead());
     System.out.println(ll.getSize());
     ll.setHead(new Node(2));
     System.out.println(ll.getHead());
-    ll.getHead().print();
-    System.out.println(ll.getSize());
+    //ll.getHead().print();
+    //System.out.println(ll.getSize());
+    ll.print();*/
+    
+    // test isEmpty works
+    ll.print();
+    ll.setHead(new Node(5));
+    ll.print();
+    
     
   }
 }

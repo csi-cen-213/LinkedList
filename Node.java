@@ -39,6 +39,4 @@ public class Node{
     System.out.print(this.data + " ");
   }
   
-/*
-+ print() : void */
 }

@@ -31,6 +31,14 @@ public class Main{
     ll.add(0,3);
     ll.add(0,4);
     ll.add(0,5);
+    ll.add(5, 20);
+    ll.add(6, 21);
+    //ll.add(100, 5);
+    
+    ll.add(5, 10);
+    ll.add(3, 1000);
+    
+    
     ll.print();
     System.out.println("size: " + ll.getSize());
     

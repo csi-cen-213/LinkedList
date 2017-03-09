@@ -41,33 +41,55 @@ public class SinglyLinkedList{
   }
   
   public void add(int index, int data) {
-    // simple version: assume index is 0
-    // write pseudocode to add data to
-    // the front of the list
     Node newNode = new Node(data);
-    Node current = this.head;
-    if (this.isEmpty()) {
-      this.head = newNode;
-    }
+    
+    if( index > this.size)
+      //error
+      System.out.println("Index " + index + " does not exist.");
     else {
-      newNode.setNext(head);
-      this.head = newNode;
-    }
-    // add to end of list
-    while (current.getNext() != null) {
-      current = current.getNext();
-    }
-    current.setNext(newNode);
-    }
+      // if list is empty, newNode is head
+      if (this.isEmpty()) {
+        this.head = newNode;
+      }
+      // adds to front of list
+      else if (index == 0) {
+        newNode.setNext(head);
+        this.head = newNode;
+      }
+      else if (index == this.size) {
+        // adds to end of list
+        Node current = this.head;
+        while (current.getNext() != null) {
+          current = current.getNext();
+        }
+        current.setNext(newNode);
+      }
+      else {
+        // adds to middle of list
+        Node current = this.head;
+        for(int i = 0; i < index - 1; i++) {
+          current = current.getNext();
+        }
+        newNode.setNext(current.getNext());
+        current.setNext(newNode);
+      }
+    
+    
+    
+
+   
     // Write pseudocode to do entire add method
     // use addToBeginning, addToEnd to stand in
     // for the stuff we already have done
     this.size++;
-
+    }
   }
   
+  // Finds a node and returns its index
+  public Node find(int index) {
+    
+  }
 /*
-+ add(int, int) : void
 + find(int): Node
 + delete(int): void
 + add(int, Node) : void

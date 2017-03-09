@@ -85,9 +85,17 @@ public class SinglyLinkedList{
     }
   }
   
-  // Finds a node and returns its index
+  // Finds a node and returns its reference
   public Node find(int index) {
-    
+    // BUG: null pointer exception when index < 0
+    Node tmp = head;
+    if (index < 0 || index > size)
+      return null;
+    else {
+      for (int i = 0; i < index; i++)
+        tmp = tmp.getNext();
+      return tmp;
+    }
   }
 /*
 + find(int): Node

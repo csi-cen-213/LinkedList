@@ -38,6 +38,13 @@ public class Main{
     ll.add(5, 10);
     ll.add(3, 1000);
     
+    ll.find(3).print();
+    System.out.println();
+    ll.find(-1).print();
+    ll.find(1000).print();
+    ll.find(0).print();
+    ll.find(0).print();
+    System.out.println(8);
     
     ll.print();
     System.out.println("size: " + ll.getSize());

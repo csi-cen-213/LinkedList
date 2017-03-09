@@ -44,8 +44,8 @@ public class SinglyLinkedList{
     // simple version: assume index is 0
     // write pseudocode to add data to
     // the front of the list
-    //BUG: doesn't update size properly
     Node newNode = new Node(data);
+    Node current = this.head;
     if (this.isEmpty()) {
       this.head = newNode;
     }
@@ -53,15 +53,23 @@ public class SinglyLinkedList{
       newNode.setNext(head);
       this.head = newNode;
     }
-/*
+    // add to end of list
+    while (current.getNext() != null) {
+      current = current.getNext();
+    }
+    current.setNext(newNode);
+    }
+    // Write pseudocode to do entire add method
+    // use addToBeginning, addToEnd to stand in
+    // for the stuff we already have done
+    this.size++;
 
-head = new
-*/
   }
   
 /*
 + add(int, int) : void
 + find(int): Node
++ delete(int): void
 + add(int, Node) : void
 */
 }

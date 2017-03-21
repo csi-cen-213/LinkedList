@@ -35,19 +35,34 @@ public class Main{
     ll.add(6, 21);
     //ll.add(100, 5);
     
-    ll.add(5, 10);
+    /*ll.add(5, 10);
     ll.add(3, 1000);
     
     ll.find(3).print();
     System.out.println();
-    ll.find(-1).print();
-    ll.find(1000).print();
+    //ll.find(-1).print();
+    //ll.find(1000).print();
+    System.out.println(ll.find(-1));
+    System.out.println(ll.find(1000));
+    if (ll.find(-1) != null) {
+      ll.find(-1).print();
+    }
+    else {
+      System.out.println("Node doesn't exist.");
+    }
     ll.find(0).print();
     ll.find(0).print();
     System.out.println(8);
     
     ll.print();
+    System.out.println("size: " + ll.getSize());*/
+    /*ll.print();
     System.out.println("size: " + ll.getSize());
-    
+    ll.delete(6);
+    ll.print();
+    System.out.println("size: " + ll.getSize());*/
+    ll.print();
+    ll.destroy();
+    ll.print();
   }
 }

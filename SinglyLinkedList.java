@@ -89,17 +89,40 @@ public class SinglyLinkedList{
   public Node find(int index) {
     // BUG: null pointer exception when index < 0
     Node tmp = head;
-    if (index < 0 || index > size)
+    if (index < 0 || index > size) {
+      //System.out.println("Find: " + index);
       return null;
+    }
     else {
       for (int i = 0; i < index; i++)
         tmp = tmp.getNext();
       return tmp;
     }
   }
-/*
-+ find(int): Node
-+ delete(int): void
-+ add(int, Node) : void
-*/
+  
+  // Deletes node at index if it exists
+  public void delete(int index) {
+    Node tmp = this.head;
+    int i = 0;
+    // delete head
+    if (index == 0) {
+      this.head = this.head.getNext();
+    }
+    // delete nodes later in list
+    while (tmp.getNext() != null 
+             && i < index-1) {
+      //System.out.println("Delete: " + i);
+      tmp = tmp.getNext();
+      i++;
+    }
+    if (index < size && index > 0) {
+      tmp.setNext(tmp.getNext().getNext());
+    size--;
+    }    
+  }
+  
+  public void destroy() {
+    this.head = null;
+  }
+  
 }
